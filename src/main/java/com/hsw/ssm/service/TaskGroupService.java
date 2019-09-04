@@ -9,4 +9,6 @@ public interface TaskGroupService {
      * @return
      */
     TaskGroup getItemById(int id);
+
+    int insertItem(TaskGroup taskGroup);
 }

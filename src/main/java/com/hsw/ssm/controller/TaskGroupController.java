@@ -21,4 +21,10 @@ public class TaskGroupController {
         int id = Integer.parseInt(request.getParameter("id"));
         return groupService.getItemById(id);
     }
+
+    @RequestMapping("insertItem")
+    @ResponseBody
+    public int insertItem(TaskGroup taskGroup) {
+        return  groupService.insertItem(taskGroup);
+    }
 }

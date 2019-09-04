@@ -24,4 +24,9 @@ public class TaskGroupServiceImpl implements TaskGroupService {
     public TaskGroup getItemById(int id) {
         return mapper.selectByPrimaryKey(id);
     }
+
+    @Override
+    public int insertItem(TaskGroup taskGroup) {
+        return mapper.insertSelective(taskGroup);
+    }
 }
